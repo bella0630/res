@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vizualizare Indicatori UE</title>
+    <link rel="stylesheet" href="3_1087_Vasile_Andrei_Stefan.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Vizualizare Indicatori Uniunea Europeană</h1>
+    </div>
+	
+	<div class="header2">
+		<h2>Scurta descriere indicatori</h2>
+	</div>
+
+    <div class="grid-container">
+        <div class="indicator1">
+            <h3>PIB pe Cap de Locuitor</h3>
+            <p>
+                Produsul Intern Brut (PIB) pe cap de locuitor este un indicator economic ce măsoară valoarea totală a bunurilor și serviciilor produse într-o țară,
+                raportată la populația acesteia. Este un indicator cheie al dezvoltării economice.
+            </p>
+        </div>
+        <div class="indicator2">
+            <h3>Speranța de Viață</h3>
+            <p>
+                Speranța de viață reprezintă numărul mediu de ani pe care o persoană născută într-un anumit an îi poate aștepta să trăiască, având în vedere
+                condițiile de sănătate și mediu ale acelei perioade.
+            </p>
+        </div>
+
+        <div class="indicator3">
+            <h3>Populație</h3>
+            <p>
+                Populația reprezintă numărul total de locuitori ai unei țări. Este un indicator demografic esențial pentru analiza resurselor, dezvoltării economice și sociale.
+            </p>
+        </div>
+
+    </div>
+	
+	<div class="header2">
+		<h2>Evolutia unui indicator a unei tari la alegere</h2>
+		<p>Indicatie: alege o tara, un indicator din cei prezentati mai sus, si o perioada pentru a vizualiza evolutia indicatorului ales.</p>
+		<button class="info-button" data-info="infoChart">Află mai multe</button>
+		<div class="info-box" id="infoChart">
+			<p>Această secțiune permite vizualizarea grafică, sub foma unei histograme, a evoluției unui indicator selectat pentru o țară specifică pe o perioadă de 18 ani. De asemenea, atunci cand va pozitionati cu cursorul mouse-ului deasupra unei bare va va aparea un tool tip cu informatii.</p>
+		</div>
+	</div>
+	 
+	 <div class="grid-container">
+        <div class="tari">
+            <label for="countries">Selectează țările:</label>
+            <select id="countries" multiple>
+                <option value="BE">Belgia</option>
+                <option value="BG">Bulgaria</option>
+                <option value="CZ">Cehia</option>
+                <option value="DK">Danemarca</option>
+                <option value="DE">Germania</option>
+				<option value="EE">Estonia</option>
+				<option value="IE">Irlanda</option>
+				<option value="EL">Grecia</option>
+				<option value="ES">Spania</option>
+				<option value="FR">Franța</option>
+				<option value="HR">Croația</option>
+				<option value="IT">Italia</option>
+				<option value="CY">Cipru</option>
+				<option value="LV">Letonia</option>
+				<option value="LT">Lituania</option>
+				<option value="LU">Luxemburg</option>
+				<option value="HU">Ungaria</option>
+				<option value="MT">Malta</option>
+				<option value="NL">Țările de Jos</option>
+				<option value="AT">Austria</option>
+				<option value="PL">Polonia</option>
+				<option value="PT">Portugalia</option>
+				<option value="RO">România</option>
+				<option value="SI">Slovenia</option>
+				<option value="SK">Slovacia</option>
+				<option value="FI">Finlanda</option>
+				<option value="SE">Suedia</option>
+            </select>
+        </div>
+
+		<div class="indicatori">
+			<label for="indicator">Selectează indicatorul:</label>
+			<select id="indicator">
+				<option value="sdg_08_10?na_item=B1GQ&unit=CLV10_EUR_HAB">PIB per capita</option>
+				<option value="demo_mlexpec?sex=T&age=Y1">Speranța de viață</option>
+				<option value="demo_pjan?sex=T&age=TOTAL">Populația</option>
+			</select>
+		</div>
+		<button id="displayChart">Afișează graficul</button>
+        <div class="chart-wrapper">
+			<div id="chart"></div>
+		</div>
+    </div>
+	
+	<div class="header2">
+		<h2>Vizualizare bubble chart pentru un an la alegere</h2>
+		<p>Indicatie: alege un an de la 2000 la 2018 pentru a vizualiza plasarea fiecarei tari pe grafic in functie de valoarea PIB-ului, sperantei la viata si a populatiei.</p>
+		<button class="info-button" data-info="infoBubble">Află mai multe</button>
+		<div class="info-box" id="infoBubble">
+			<p>Bubble Chart-ul afișează relația dintre PIB (axa ox), speranța de viață (axa oy) și populația (marimea bulelor) țărilor UE pentru un anumit an ales de dumneavoastra.</p>
+		</div>
+	</div>
+	
+	<div class="grid-container">
+        <div class="ani">
+            <label for="ani">Selectează anul:</label>
+            <select id="ani" multiple>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+				<option value="2005">2005</option>
+				<option value="2006">2006</option>
+				<option value="2007">2007</option>
+				<option value="2008">2008</option>
+				<option value="2009">2009</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+            </select>
+        </div>
+		<button id="displayBubbleChart">Afișează bubble chart</button>
+		<button id="animateBubbleChartCSSLike">Animație</button>
+	</div>
+	<canvas id="bubbleChartCanvas" width="1500" height="600" style="border: 1px solid #ccc"></canvas>
+	<div class="header2">
+		<h2>Vizualizare sub forma de tabel a tuturor valorilor disponibile intr-un an ales.</h2>
+		<p>Indicatie: alege un an de la 2000 la 2018 pentru a vizualiza valorile fiecarui indicator al tuturor tarilor.</p>
+		 <button class="info-button" data-info="infoTable">Află mai multe</button>
+		<div class="info-box" id="infoTable">
+			<p>Acest tabel prezintă valorile PIB-ului, speranței de viață și populației pentru fiecare țară, evidențiind distanțele față de media UE prin culori, intr-un an ales.</p>
+		</div>
+	</div>
+	<div class="grid-container">
+		<div class="ani">
+			<label for="ani">Selectează anul:</label>
+				<select id="aniTabel">
+					<option value="2000" selected>2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+				</select>
+		</div>
+
+		<button id="displayTable">Afișează Tabel</button>
+		
+	</div>
+	<div id="tableContainer"></div>
+	<footer class="footer">
+		<p>&copy; 2025 Vizualizare Indicatori UE | Creat de Vasile Andrei Stefan</p>
+		<p>Ultima actualizare: 2025</p>
+	</footer>
+	<script src="3_1087_Vasile_Andrei_Stefan.js"></script>
+</body>
+</html>
