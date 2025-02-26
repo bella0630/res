@@ -1,0 +1,142 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('Media/img_fundal.jpg');
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.container {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.upload-zone {
+    margin: 20px auto;
+    padding: 30px;
+    border: 2px dashed #0d47a1;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-zone p {
+    margin: 0;
+    color: #0d47a1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.upload-zone:hover {
+    background: rgba(13, 71, 161, 0.1);
+    border-color: #0d47a1;
+    transform: scale(1.02);
+}
+
+.upload-zone.dragging {
+    background-color: rgba(13, 71, 161, 0.2);
+    border-color: #0d47a1;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    position: relative;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 30px;
+    border: none;
+    background: linear-gradient(90deg, #0a7ffd, #014185);
+    color: white;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #0056b3, #014187);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #d1d9e6;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    border-color: #0475ed;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.414);
+    outline: none;
+}
+
+#textInputForm,
+#scaleInputForm {
+    display: none;
+}
+
+.alert {
+    padding: 15px;
+    background-color: rgba(255, 0, 0, 0.093);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    color: red;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 0, 0.048);
+    border-color: rgba(0, 255, 0, 0.3);
+    color: #2c692f;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}

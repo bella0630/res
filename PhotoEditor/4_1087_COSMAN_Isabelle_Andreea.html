@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editor Foto</title>
+    <link rel="stylesheet" href="4_1087_COSMAN_Isabelle_Andreea.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Photo Editor</h1>
+        <div class="upload-zone" id="uploadZone">
+            <p>Trage o imagine aici sau <label for="uploadInput" class="upload-label">Incarca</label></p>
+            <input type="file" id="uploadInput" accept="image/*" hidden>
+        </div>
+        <canvas id="photoCanvas"></canvas>
+        <canvas id="histogramCanvas" width="300" height="150"></canvas>
+        <div id="selection" class="selection"></div>
+        <button id="btnSalveaza">Salveaza Imaginea</button>
+        <button id="btnStergere">Sterge selectia</button>
+        <button id="btnCrop">Crop</button>
+        <div>
+            <button id="btnEfecte">Efecte</button>
+            <select id="efecte" style="display: none;">
+                <option value="">Selecteaza un efect</option>
+                <option value="black-and-white">Alb-negru</option>
+                <option value="invert">Inversare culori</option>
+                <option value="brightness">Luminozitate crescuta</option>
+                <option value="darkness">Luminozitate scazuta</option>
+            </select>
+        </div>
+        <button id="btnAdaugaText">Adauga Text</button>
+        <div id="textInputForm" style="display: none;">
+            <div>
+                <label for="Text">Textul de adaugat:</label>
+                <input type="text" id="Text" placeholder="Introdu textul">
+            </div>
+            <div>
+                <label for="FontSize">Dimensiune font:</label>
+                <input type="number" id="FontSize" value="20" min="1" max="100">
+            </div>
+            <div>
+                <label for="TextColor">Culoare text:</label>
+                <input type="color" id="TextColor" value="#000000">
+            </div>
+            <button id="btnApply">Aplica Text</button>
+        </div>
+        <button id="btnScalare">Scaleaza Imaginea</button>
+        <div id="scaleInputForm" style="display: none;">
+        <div>
+            <label for="Width">Latime noua:</label>
+            <input type="number" id="Width" placeholder="Introdu latimea">
+        </div>
+        <div>
+            <label for="Height">Inaltime noua:</label>
+            <input type="number" id="Height" placeholder="Introdu inaltimea">
+        </div>
+        <p>* Introduceti doar una dintre valori.</p>
+        <button id="btnApply2">Aplica Scalarea</button>
+    </div>
+    <button id="btnHistogram">Calculeaza Histograma</button>
+    <script src="4_1087_COSMAN_Isabelle_Andreea.js"></script>
+</body>
+</html>
